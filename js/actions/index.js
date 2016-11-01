@@ -20,12 +20,42 @@ var playerGuess = function(guess) {
     }
 };
 
+var FEEDBACK = 'FEEDBACK'
+var generateFeedback = function(feedback) {
+    return {
+        type: FEEDBACK,
+        text: 'message'
+    }
+};
+
+var WINNER = 'WINNER'
+var alertWinner = function(gameWon) {
+    return {
+        type: WINNER,
+        text: 'You guessed the number'
+    }
+};
+
+var NEWGAME = 'NEWGAME'
+var startNewGame = function(data) {
+    return {
+       type: NEWGAME,
+       data: data
+    }
+};
+
 
 
 exports.RANDOM_NUMBER = RANDOM_NUMBER;
 exports.generateRandomNumber = generateRandomNumber;
-exports.GUESS_NUMBER = GUESS_NUMBER
-exports.playerGuess = playerGuess
+exports.GUESS_NUMBER = GUESS_NUMBER;
+exports.playerGuess = playerGuess;
+exports.FEEDBACK = FEEDBACK;
+exports.generateFeedback = generateFeedback;
+exports.WINNER = WINNER;
+exports.alertWinner = alertWinner;
+exports.NEWGAME = NEWGAME;
+exports.startNewGame = startNewGame;
 
 
 

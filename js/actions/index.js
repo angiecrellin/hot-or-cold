@@ -24,15 +24,15 @@ var FEEDBACK = 'FEEDBACK'
 var generateFeedback = function(feedback) {
     return {
         type: FEEDBACK,
-        text: 'message'
+        feedback: feedback
     }
 };
 
 var WINNER = 'WINNER'
-var alertWinner = function(gameWon) {
+var alertWinner = function(feedback) {
     return {
         type: WINNER,
-        text: 'You guessed the number'
+        feedback: feedback
     }
 };
 

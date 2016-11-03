@@ -5,10 +5,10 @@
 //start new game
 
 var RANDOM_NUMBER = 'RANDOM_NUMBER';
-var generateRandomNumber = function(number) {
+var generateRandomNumber = function(answer) {
     return {
         type: RANDOM_NUMBER,
-        number: number
+        answer: answer
     }
 };
 
@@ -36,10 +36,10 @@ var alertWinner = function(feedback) {
     }
 };
 
-var NEWGAME = 'NEWGAME'
+var NEW_GAME = 'NEW_GAME'
 var startNewGame = function(data) {
     return {
-       type: NEWGAME,
+       type: NEW_GAME,
        data: data
     }
 };
@@ -54,7 +54,7 @@ exports.FEEDBACK = FEEDBACK;
 exports.generateFeedback = generateFeedback;
 exports.WINNER = WINNER;
 exports.alertWinner = alertWinner;
-exports.NEWGAME = NEWGAME;
+exports.NEW_GAME = NEW_GAME;
 exports.startNewGame = startNewGame;
 
 

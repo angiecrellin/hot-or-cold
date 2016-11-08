@@ -68,8 +68,16 @@ var saveGuessCountError = function(guessCount, error){
   };
 };
 
+var UPDATE_FEWEST_GUESSES = 'UPDATE_FEWEST_GUESSES';
+var updateFewestGuesses = function(userGuess){
+    return {
+    type: UPDATE_FEWEST_GUESSES,
+    userGuess
+  };
+};
+
 var fetchFewestGuesses = function(fewestGuesses){
-  
+
   return function(dispatch){
     var url = 'https://react-redux-angiecrellin.c9users.io';
     return fetch(url).then(function(response){
@@ -137,6 +145,4 @@ exports.saveGuessCountError = saveGuessCountError;
 
 exports.fetchFewestGuesses = fetchFewestGuesses;
 exports.saveGuessCount = saveGuessCount;
-
-
-
+exports.updateFewestGuesses = updateFewestGuesses;

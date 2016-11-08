@@ -33,10 +33,17 @@ var mapStateToProps = function(state, props){
   return {
     isModalOpen: state.isModalOpen,
     gameOver: state.gameOver,
-    guessCount: state.guessCount
+    guessCount: state.guessCount,
+    fewestGuesses: state.fewestGuesses
   };
 };
 
-var Container = connect(mapStateToProps)(GameContainer);
+var mapDispatchToProps = function(dispatch){
+  return {
+    updateFewestGuesses: () => dispatch(actions.updateFewestGuesses(userGuess))
+  };
+};
+
+var Container = connect(mapStateToProps, mapDispatchToProps)(GameContainer);
 
 module.exports = Container;

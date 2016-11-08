@@ -11,13 +11,19 @@ class GameForm extends React.Component{
   submitGuess(event){
     event.preventDefault();
 
-  
     var userGuess = this.refs.userGuess.value;
 
-  
+    if(userGuess < this.props.fewestGuesses) {
+      this.props.dispatch(updateFewestGuesses(userGuess))
+    }
+
     this.props.dispatch(actions.makeGuess(userGuess));
     this.refs.userGuess.value = '';
   }
+
+  // A function that checks if the userGuess matchs the randomnumber
+  // - check if the users answer is less than the fewestGuess, if so dispatch the updateFewestGuesses action &
+  // 
 
   render(){
     return(

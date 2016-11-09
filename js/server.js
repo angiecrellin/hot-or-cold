@@ -4,8 +4,9 @@ var bodyParser = require('body-parser');
 
 var port = process.env.PORT || 8080;
 
-app.use(express.static('public'));
+
 app.use(bodyParser.json());
+app.use(express.static('public'));
 
 var fewestGuesses = function(){
   this.fewestGuesses = 5;	

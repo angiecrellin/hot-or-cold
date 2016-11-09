@@ -34,7 +34,8 @@ var mapStateToProps = function(state, props){
     isModalOpen: state.isModalOpen,
     gameOver: state.gameOver,
     guessCount: state.guessCount,
-    fewestGuesses: state.fewestGuesses
+    fewestGuesses: state.fewestGuesses,
+    feedback: state.feedback
   };
 };
 

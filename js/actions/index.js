@@ -33,6 +33,14 @@ var closeModal = function(){
   };
 };
 
+var GATHER_FEEDBACK = 'GATHER_FEEDBACK';
+var gatherFeedback = function(feedback){
+  return {
+    type: GATHER_FEEDBACK,
+    feedback
+  };
+};
+
 
 var FETCH_FEWEST_GUESS_SUCCESS = 'FETCH_FEWEST_GUESS_SUCCESS';
 var fetchFewestGuessSuccess = function(fewestGuesses){

@@ -66,16 +66,12 @@ var gameReducer = function(state, action) {
     
 
   
-    
+}   
 
 
 
 
-<<<<<<<<< saved version
 
 
 
 exports.gameReducer = gameReducer;
-=========
-
->>>>>>>>> local version
